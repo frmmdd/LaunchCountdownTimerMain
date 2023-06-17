@@ -1,0 +1,84 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Dark-desaturated-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: hsl(235, 16%, 14%);
+  --Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+  --clr-number: hsl(347, 61%, 57%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--Very-dark-mostly-black-blue) !important;
+  overflow-x: hidden;
+  font-family: 'Red Hat Text', sans-serif !important;
+}
+
+h1 {
+  line-height: 5;
+}
+
+h1,
+span {
+  color: var(--White) !important;
+}
+
+#root {
+  width: 100dvw;
+  min-height: 100dvh;
+}
+
+main {
+  padding-block-start: 7em;
+  margin-inline: auto;
+  text-align: center;
+  width: 100dvw;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.square {
+  min-width: max-content;
+  background: var(--Dark-desaturated-blue);
+}
+
+.square:before,
+.square:after {
+  position: relative;
+  display: inline-block;
+  width: 0.3em;
+  height: 0.3em;
+  content: " ";
+  border-radius: 50%;
+  background: var(--Very-dark-mostly-black-blue) !important;
+}
+
+.square:before {
+  right: 0.7em;
+  bottom: 0.2em;
+}
+
+.square:after {
+  left: 0.75em;
+    bottom: 0.2em;
+}
+
+
+.txt-square {
+  display: inline-block;
+  width: 1em;
+  color: var(--clr-number) !important;
+  font-family: 'Red Hat Text', sans-serif;
+}
